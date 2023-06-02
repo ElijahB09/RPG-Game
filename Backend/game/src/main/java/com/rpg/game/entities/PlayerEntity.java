@@ -10,4 +10,13 @@ public class PlayerEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
+
+    @Column(name = "health")
+    private int health;
+
+    @Column(name = "strength")
+    private int strength;
+
+    @Column(name = "defense")
+    private int defense;
 }
