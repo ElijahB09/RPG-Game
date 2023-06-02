@@ -1,0 +1,39 @@
+Initial Project Notes
+
+	*Basic plan is to create a long term project and use a massive tech stack to help familiarize myself with technologies
+	
+	*Backend will likely be largely in Java since I like that language and Spring Boot
+
+	*I will probably utilize Typescript with the React framework for the frontend
+
+	*In addition I want to try and use things like Terraform, the cloud (AWS or Azure), maybe even some more things which I have yet to think of
+
+Rough Project Plan
+
+	Phase 1:
+		
+		*Set up project and familiarize self with the new technologies
+
+		*Create a very basic frontend and backend
+			
+			1. A player object with simple and few properties stored in a DB on the backend which can have its information displayed on the frontend
+
+			2. Begin looking at how the cloud and Terraform can be implemented
+
+		*Begin planning for more objects than just players
+
+		*Plan for using websockets early on so that their implementation can be smoother
+
+	Phase 2:
+
+		*Attempt to involve the Cloud and Terraform in the project with a very basic setup. Potentially migrate DB from local SQL to something on the cloud and automate with Terraform
+
+		*Setup a simple ci/cd pipeline
+
+		*Add in other objects like enemies and add more complex properties to the player object
+
+		*Learn more about frontend and improve upon the current frontend to potentially be able to display top-down movement of a player character
+
+	Phase 3:
+
+		*Plan this when further into the project
