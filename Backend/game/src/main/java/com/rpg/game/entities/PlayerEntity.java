@@ -19,4 +19,7 @@ public class PlayerEntity {
 
     @Column(name = "defense")
     private int defense;
+
+    @Column(name = "name")
+    private String name;
 }
