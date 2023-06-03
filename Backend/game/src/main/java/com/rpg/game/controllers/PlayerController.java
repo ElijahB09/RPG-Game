@@ -16,6 +16,7 @@ public class PlayerController {
     PlayerRepository playerRepository;
 
     @GetMapping
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<ArrayList<PlayerEntity>> getAllPlayers() {
         ArrayList<PlayerEntity> allPlayers = new ArrayList<>();
         playerRepository.findAll().forEach(allPlayers::add);
@@ -23,6 +24,7 @@ public class PlayerController {
     }
 
     @PostMapping
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<PlayerEntity> postPlayer(@RequestBody PlayerEntity player) {
         PlayerEntity savedPlayer = playerRepository.save(player);
         return ResponseEntity.ok(savedPlayer);
