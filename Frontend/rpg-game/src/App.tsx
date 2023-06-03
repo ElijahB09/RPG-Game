@@ -4,7 +4,7 @@ import Viewtest from './views/TestingViews';
 function App() {
   return (
     <div className='container'>
-        <Viewtest />
+      <Viewtest />
     </div>
   );
 }
