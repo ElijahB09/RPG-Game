@@ -7,11 +7,11 @@ export const PostPlayer = async (
     const axios = await BuildAxiosRequest();
     const inputPlayer = player
 
-    return await axios.post('players', inputPlayer);
+    return (await axios.post('players', inputPlayer));
 }
 
 export const GetPlayers = async () => {
     const axios = await BuildAxiosRequest();
     
-    return await axios.get('players');
+    return (await axios.get('players'));
 }

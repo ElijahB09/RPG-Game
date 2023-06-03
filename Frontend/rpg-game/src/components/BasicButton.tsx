@@ -1,8 +1,8 @@
-import axios from 'axios';
+import { GetPlayers } from '../api/PlayerApi';
 
 function BasicButton() {
     const handleClick = () => {
-        const players = axios.get("http://localhost:8080/players").catch(function (error) {
+        const players = GetPlayers().catch(function (error) {
             if (error.response) {
               // The request was made and the server responded with a status code
               // that falls out of the range of 2xx
@@ -20,7 +20,7 @@ function BasicButton() {
             }
            
           });
-        console.log();
+        console.log(players);
     }
 
     return (
