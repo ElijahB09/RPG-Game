@@ -1,10 +1,10 @@
 import axios, { AxiosInstance } from "axios";
 
-const BuildAxiosRequest = async (): Promise<AxiosInstance> => {
+const BuildBaseRequest = async (): Promise<AxiosInstance> => {
     return (
         axios.create({
             baseURL: 'http://localhost:8080/'
         })
     )
 }
-export default BuildAxiosRequest
+export default BuildBaseRequest
