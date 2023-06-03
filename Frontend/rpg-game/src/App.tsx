@@ -1,5 +1,5 @@
 import './App.css';
-import Viewtest from './views/testing-views';
+import Viewtest from './views/TestingViews';
 
 function App() {
   return (
