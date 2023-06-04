@@ -1,21 +1,21 @@
 import { render } from '@testing-library/react';
-import { GetPlayers } from '../api/PlayerApi';
+import { GetPlayerById, GetPlayers } from '../api/PlayerApi';
 import Player from '../models/PlayerModel';
 
 function BasicButton() {
     const handleClick = () => {
-        const players = GetPlayers().then(response => {
-            const allPlayers: Array<Player> = response.data;
+        const playerById = GetPlayerById(1).then(response => {
+            const player: Player = response.data;
             render(
             <div>
-                <p>{allPlayers[0].id}</p>
-                <p>{allPlayers[0].name}</p>
-                <p>{allPlayers[0].health}</p>
-                <p>{allPlayers[0].strength}</p>
-                <p>{allPlayers[0].defense}</p>
+                <p>{player.id}</p>
+                <p>{player.name}</p>
+                <p>{player.health}</p>
+                <p>{player.strength}</p>
+                <p>{player.defense}</p>
             </div>
             )
-            console.log(allPlayers);
+            console.log(player);
         }).catch(error => {
             if (error.response) {
                 // The request was made and the server responded with a status code

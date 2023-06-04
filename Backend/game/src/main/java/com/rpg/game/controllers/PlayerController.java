@@ -24,9 +24,9 @@ public class PlayerController {
         return ResponseEntity.ok(allPlayers);
     }
 
-    @GetMapping("/{playerId}")
+    @GetMapping(params = "playerId")
     @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity<PlayerEntity> getPlayerById(@PathVariable("playerId") int playerId) {
+    public ResponseEntity<PlayerEntity> getPlayerById(@RequestParam Integer playerId) {
         PlayerEntity player = playerRepository.findById(playerId).get();
         return ResponseEntity.ok(player);
     }
