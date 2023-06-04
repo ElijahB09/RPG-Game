@@ -8,11 +8,11 @@ function BasicButton() {
             const allPlayers: Array<Player> = response.data;
             render(
             <div>
-                <p>{allPlayers[0].defense}</p>
-                <p>{allPlayers[0].strength}</p>
-                <p>{allPlayers[0].health}</p>
-                <p>{allPlayers[0].name}</p>
                 <p>{allPlayers[0].id}</p>
+                <p>{allPlayers[0].name}</p>
+                <p>{allPlayers[0].health}</p>
+                <p>{allPlayers[0].strength}</p>
+                <p>{allPlayers[0].defense}</p>
             </div>
             )
             console.log(allPlayers);
