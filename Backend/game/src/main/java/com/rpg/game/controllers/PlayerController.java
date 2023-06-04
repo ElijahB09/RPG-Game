@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/players")
@@ -21,6 +22,13 @@ public class PlayerController {
         ArrayList<PlayerEntity> allPlayers = new ArrayList<>();
         playerRepository.findAll().forEach(allPlayers::add);
         return ResponseEntity.ok(allPlayers);
+    }
+
+    @GetMapping("/{playerId}")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<PlayerEntity> getPlayerById(@PathVariable("playerId") int playerId) {
+        PlayerEntity player = playerRepository.findById(playerId).get();
+        return ResponseEntity.ok(player);
     }
 
     @PostMapping
