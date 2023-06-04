@@ -24,7 +24,7 @@ export const GetPlayerById = async (playerId: number) => {
     const axios = await BuildBaseRequest();
 
     return (
-        await axios.get('players/', {
+        await axios.get('players', {
             params: [playerId]
         })
     )

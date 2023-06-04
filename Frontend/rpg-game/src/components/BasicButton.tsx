@@ -5,14 +5,14 @@ import Player from '../models/PlayerModel';
 function BasicButton() {
     const handleClick = () => {
         const playerById = GetPlayerById(1).then(response => {
-            const player: Player = response.data;
+            const player: Array<Player> = response.data;
             render(
             <div>
-                <p>{player.id}</p>
-                <p>{player.name}</p>
-                <p>{player.health}</p>
-                <p>{player.strength}</p>
-                <p>{player.defense}</p>
+                <p>{player[0].id}</p>
+                <p>{player[0].name}</p>
+                <p>{player[0].health}</p>
+                <p>{player[0].strength}</p>
+                <p>{player[0].defense}</p>
             </div>
             )
             console.log(player);
