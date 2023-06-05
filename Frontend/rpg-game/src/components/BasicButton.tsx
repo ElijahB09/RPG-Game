@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { GetPlayerById, GetPlayers } from '../api/PlayerApi';
-import Player from '../models/PlayerModel';
+import { Player } from '../models/PlayerModel';
 
 function BasicButton() {
     const handleClick = () => {

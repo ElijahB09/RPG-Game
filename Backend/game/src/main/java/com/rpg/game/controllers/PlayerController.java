@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/players")
@@ -24,17 +23,16 @@ public class PlayerController {
         return ResponseEntity.ok(allPlayers);
     }
 
+    // Don't really need this
     @GetMapping(params = "playerId")
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<PlayerEntity> getPlayerById(@RequestParam Integer playerId) {
-        PlayerEntity player = playerRepository.findById(playerId).get();
-        return ResponseEntity.ok(player);
+        return ResponseEntity.ok(playerRepository.findById(playerId).get());
     }
 
     @PostMapping
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<PlayerEntity> postPlayer(@RequestBody PlayerEntity player) {
-        PlayerEntity savedPlayer = playerRepository.save(player);
-        return ResponseEntity.ok(savedPlayer);
+        return ResponseEntity.ok(playerRepository.save(player));
     }
 }
