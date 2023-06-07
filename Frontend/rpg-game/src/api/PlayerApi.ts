@@ -24,6 +24,6 @@ export const GetPlayerById = async (playerId: number) => {
     const axios = await BuildBaseRequest();
 
     return (
-        await axios.get(`players${playerId}`)
+        await axios.get('players/' + playerId)
     );
 }

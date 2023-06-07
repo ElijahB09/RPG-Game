@@ -4,18 +4,18 @@ import { Player } from '../models/PlayerModel';
 
 function BasicButton() {
     const handleClick = () => {
-        const playerById = GetPlayerById(1).then(response => {
-            const player: Array<Player> = response.data;
+        GetPlayerById(2).then(response => {
+            const player: Player = response.data;
+            console.log(player);
             render(
             <div>
-                <p>{player[0].id}</p>
-                <p>{player[0].name}</p>
-                <p>{player[0].health}</p>
-                <p>{player[0].strength}</p>
-                <p>{player[0].defense}</p>
+                <p>{player.id}</p>
+                <p>{player.name}</p>
+                <p>{player.health}</p>
+                <p>{player.strength}</p>
+                <p>{player.defense}</p>
             </div>
             )
-            console.log(player);
         }).catch(error => {
             if (error.response) {
                 // The request was made and the server responded with a status code
