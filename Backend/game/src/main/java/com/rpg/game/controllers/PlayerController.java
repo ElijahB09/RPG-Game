@@ -24,9 +24,9 @@ public class PlayerController {
     }
 
     // Don't really need this
-    @GetMapping(params = "playerId")
+    @GetMapping("/{playerId}")
     @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity<PlayerEntity> getPlayerById(@RequestParam Integer playerId) {
+    public ResponseEntity<PlayerEntity> getPlayerById(@PathVariable Integer playerId) {
         return ResponseEntity.ok(playerRepository.findById(playerId).get());
     }
 
