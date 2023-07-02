@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
-import { GetPlayerById, GetPlayers } from '../api/PlayerApi';
+import { GetPlayerById } from '../api/PlayerApi';
 import { Player } from '../models/PlayerModel';
 
-function BasicButton() {
+function GetPlayerByIdButton() {
     const handleClick = () => {
-        GetPlayerById(2).then(response => {
+        GetPlayerById(1).then(response => {
             const player: Player = response.data;
             console.log(player);
             render(
@@ -41,4 +41,4 @@ function BasicButton() {
         </div>
     );
 }
-export default BasicButton;
+export default GetPlayerByIdButton;

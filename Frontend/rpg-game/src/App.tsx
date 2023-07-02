@@ -1,10 +1,10 @@
 import './App.css';
-import Viewtest from './views/TestingViews';
+import HomeScreen from './components/views/HomeScreen';
 
 function App() {
   return (
     <div className='container'>
-      <Viewtest />
+      <HomeScreen />
     </div>
   );
 }
