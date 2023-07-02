@@ -23,7 +23,6 @@ public class PlayerController {
         return ResponseEntity.ok(allPlayers);
     }
 
-    // Don't really need this
     @GetMapping("/{playerId}")
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<PlayerEntity> getPlayerById(@PathVariable Integer playerId) {
